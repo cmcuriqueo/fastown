@@ -1,0 +1,16 @@
+[package]
+name = "fastown"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0"
+clap = { version = "4.5", features = ["derive"] }
+libc = "0.2"
+num_cpus = "1.16"
+rayon = "1.10"
+walkdir = "2.5"
+
+[profile.release]
+lto = true
+codegen-units = 1
